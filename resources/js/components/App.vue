@@ -1,5 +1,7 @@
 <template>
-  <p>{{title}}App</p>
+  <p>
+    <span>{{title}}App</span>
+  </p>
 </template>
 
 <script>
@@ -12,3 +14,11 @@
     }
   }
 </script>
+
+<style lang="scss">
+p {
+  span {
+    color: blue;
+  }
+}
+</style>
