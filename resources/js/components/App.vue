@@ -1,7 +1,8 @@
 <template>
-  <p>
-    <span>{{title}}App</span>
-  </p>
+  <div>
+    <p>{{title}}App</p>
+    <router-view/>
+  </div>
 </template>
 
 <script>
@@ -15,10 +16,8 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 p {
-  span {
-    color: blue;
-  }
+  color: blue;
 }
 </style>
