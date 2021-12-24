@@ -5,9 +5,7 @@
 - PHP 8.x
 - MySQL 8.0
 - Nodejs (lts/fermium)
-- Typescript
-- React Hooks
-- Inertia.js
+- Vue 2.x (Vue router)
 
 ## Prerequisites
 
@@ -35,7 +33,12 @@ echo "alias sail='./vendor/bin/sail'" >> ~/.zshrc
 [reco-mane] $ cp .env.example .env.testing
 
 # PHPパッケージをインストール
-[reco-mane] $ composer install
+[reco-mane] $ docker run --rm \
+    -v $(pwd):/opt \
+    -w /opt \
+    laravelsail/php80-composer:latest \
+    composer install
+    
 # .envを以下のように編集してください
 
 # DB_DATABASE=recomane<br />
