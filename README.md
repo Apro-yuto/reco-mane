@@ -33,7 +33,7 @@ echo "alias sail='./vendor/bin/sail'" >> ~/.zshrc
 [reco-mane] $ cp .env.example .env.testing
 
 # PHPパッケージをインストール
-[reco-mane] $ docker run --rm \
+[reco-mane] $ rm -rf composer.lock && docker run --rm \
     -v $(pwd):/opt \
     -w /opt \
     laravelsail/php80-composer:latest \
@@ -41,15 +41,15 @@ echo "alias sail='./vendor/bin/sail'" >> ~/.zshrc
     
 # .envを以下のように編集してください
 
-# DB_DATABASE=recomane<br />
-# DB_USERNAME=develop<br />
+# DB_DATABASE=recomane
+# DB_USERNAME=develop
 # DB_PASSWORD=(長島まで聞きにきてください)
 
 # .env.testingを以下のように編集してください
 
-# APP_KEY=(ここはenvファイルのをコピペしてください。)<br />
-# DB_DATABASE=recomane_testing<br />
-# DB_USERNAME=develop<br />
+# APP_KEY=(ここはenvファイルのをコピペしてください。)
+# DB_DATABASE=recomane_testing
+# DB_USERNAME=develop
 # DB_PASSWORD=(長島まで聞きにきてください)
 
 [reco-mane] $ sail up
