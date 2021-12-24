@@ -36,22 +36,23 @@ echo "alias sail='./vendor/bin/sail'" >> ~/.zshrc
 
 # PHPパッケージをインストール
 [reco-mane] $ composer install
+# .envを以下のように編集してください
+
+# DB_DATABASE=recomane<br />
+# DB_USERNAME=develop<br />
+# DB_PASSWORD=(長島まで聞きにきてください)
+
+# .env.testingを以下のように編集してください
+
+# APP_KEY=(ここはenvファイルのをコピペしてください。)<br />
+# DB_DATABASE=recomane_testing<br />
+# DB_USERNAME=develop<br />
+# DB_PASSWORD=(長島まで聞きにきてください)
 
 [reco-mane] $ sail up
 ```
 
-.envを以下のように編集してください
 
-> DB_DATABASE=recomane<br />
-DB_USERNAME=develop<br />
-DB_PASSWORD=(長島まで聞きにきてください)
-
-.env.testingを以下のように編集してください
-
-> APP_KEY=(ここはenvファイルのをコピペしてください。)<br />
-DB_DATABASE=recomane_testing<br />
-DB_USERNAME=develop<br />
-DB_PASSWORD=(長島まで聞きにきてください)
 
 3. マイグレーションを実行
 
