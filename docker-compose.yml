@@ -2,6 +2,7 @@
 version: '3'
 services:
     laravel.test:
+        platform: linux/x86_64
         build:
             context: ./vendor/laravel/sail/runtimes/8.1
             dockerfile: Dockerfile
