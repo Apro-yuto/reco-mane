@@ -30,19 +30,14 @@ echo "alias sail='./vendor/bin/sail'" >> ~/.zshrc
 [~] $ git clone ssh://git@github.com:Apro-yuto/reco-mane.git
 [~] $ cd reco-mane
 
-# PHPパッケージをインストール
-[reco-mane] $ sail up
-[reco-mane] $ sail composer install
-```
-
-3. マイグレーションを実行
-
-.env ファイルを準備
-
-```
+# .env ファイルを準備
 [reco-mane] $ cp .env.example .env
 [reco-mane] $ cp .env.example .env.testing
-[reco-mane] $ sail artisan key:generate
+
+# PHPパッケージをインストール
+[reco-mane] $ composer install
+
+[reco-mane] $ sail up
 ```
 
 .envを以下のように編集してください
@@ -57,6 +52,13 @@ DB_PASSWORD=(長島まで聞きにきてください)
 DB_DATABASE=recomane_testing<br />
 DB_USERNAME=develop<br />
 DB_PASSWORD=(長島まで聞きにきてください)
+
+3. マイグレーションを実行
+
+```
+[reco-mane] $ sail artisan key:generate
+```
+
 ```bash
 [highlight] $ docker compose exec mysql bash
 [highlight] $ mysql -p
